@@ -1,0 +1,51 @@
+
+#include <stdio.h>
+
+int main()
+{ 
+    int raw,column,sum_row=0,sum_column=0;
+
+    int a[3][3]={1,2,3,
+                 4,5,6,
+                 7,8,9};
+              for (int i=0;i<3;i++)
+              {
+                  for (int j=0;j<3;j++)
+                  {
+                    printf("a[%d][%d]=",i,j);
+                    printf("%d\n",a[i][j]);
+                  }
+              }
+              printf("Enter row : ");
+              scanf("%d",&raw);
+              
+              
+              // printing the selected row 
+              for (int i=raw;i<=raw;i++)
+             {
+                 for (int j=0;j<=2;j++)
+                 {
+                   printf("%d ",a[i][j]); 
+                   sum_row+=a[i][j];
+                 }
+             }
+             // print the sum of selected row 
+             printf("\nSum of row=%d",sum_row);
+             
+             
+             printf("\nEnter column : ");
+             scanf("%d",&column);
+             
+             // printing the selected column
+            for (int i=column;i<=column;i++)
+             {
+                 for (int j=0;j<=2;j++)
+                 {
+                   printf("%d ",a[j][i]); 
+                   sum_column+=a[j][i];
+                 }
+             }
+             //printing the sum of selcted column
+             printf("\nSum of column=%d",sum_column);
+    return 0;
+}
